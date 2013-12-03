@@ -34,4 +34,7 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 ### Installing npm dependencies
 
 - Install JSHint (to validate JS code)
-	npm install grunt-contrib-jshint --save-dev
+	npm install grunt-contrib-jshint --save
+
+- Install LessCss
+	npm install grunt-contrib-less --save
