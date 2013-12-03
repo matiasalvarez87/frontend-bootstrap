@@ -6,6 +6,8 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 
 ## Set-up project
 
+### Bower
+
 - Install/upgrade Bower's last version:
 	sudo npm install -g bower
 	sudo npm update -g bower
@@ -15,3 +17,10 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 
 - Initialize Bower project
 	bower init
+
+
+### GruntJS
+
+- Initialize GruntJS project
+	npm init
+
