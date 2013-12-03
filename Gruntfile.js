@@ -4,10 +4,13 @@ module.exports = function (grunt) {
     // Load plugins
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-connect');
 
     // Project configuration.
 	grunt.initConfig({
         
+        // JSHint, JavaScript validation code
         jshint: {
             options: {
                 curly: true,
@@ -26,12 +29,14 @@ module.exports = function (grunt) {
                     $: true,
                     _: true,
                     alert: false,
-                    console: false
+                    console: false,
+                    require: true
                 }
             },
             all: ['app/**/*.js']
         },
 
+        // Less Css, compilation to CSS and minify css to prod environment
         less: {
             dev: {
                 options: {
@@ -50,7 +55,25 @@ module.exports = function (grunt) {
                     "assets/css/styles.css": "assets/less/index.less"
                 }
             }
+        },
+
+        // requirejs: {
+        //     compile: {
+                
+        //     }
+        // },
+
+        connect: {
+            dev: {
+                port: 1337,
+                combine: [
+                    'app',
+                    'assets',
+                    'bower_components'
+                ]
+            }
         }
+
     });
 
     // Default task(s).
@@ -59,5 +82,8 @@ module.exports = function (grunt) {
     // Compile
     grunt.registerTask('compile:dev', ['jshint', 'less:dev']);
     grunt.registerTask('compile:prod', ['jshint', 'less:prod']);
+
+    // Run Servers
+    grunt.registerTask('run:dev', ['compile:dev', 'connect:dev']);
 
 };

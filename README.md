@@ -38,3 +38,21 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 
 - Install LessCss
 	npm install grunt-contrib-less --save
+
+- Install RequireJS
+	npm install grunt-contrib-requirejs --save
+
+- Install Connect Server
+	npm install grunt-connect --save-dev
+
+
+### Installing Bower dependencies
+
+- Install RequireJS
+	bower install requirejs --save
+
+- Install JQuery
+	bower install jquery --save
+
+- Install UnderscoreJS
+	bower install underscore --save

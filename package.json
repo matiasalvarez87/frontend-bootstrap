@@ -2,7 +2,7 @@
   "name": "frontend-bootstrap",
   "version": "0.0.0",
   "description": "Bootstrap application to start a new Front-End project using Bower and GruntJS",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +16,11 @@
   "gitHead": "a449cf97c91878f7541f7934c382f468494669ca",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.7.2"
+    "grunt-connect": "~0.2.0"
   },
   "dependencies": {
-    "grunt-contrib-less": "~0.8.2"
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-less": "~0.8.2",
+    "grunt-contrib-requirejs": "~0.4.1"
   }
 }
