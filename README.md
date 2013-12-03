@@ -21,6 +21,8 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 
 ### GruntJS
 
-- Initialize GruntJS project
+- Initialize NPM project
 	npm init
 
+- Install GruntJS dependency
+	npm install grunt --save-dev
