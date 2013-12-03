@@ -11,3 +11,9 @@ require.config({
         'underscore': { 'exports': '_' }
     }
 });
+
+(function () {
+    require(['js/app'], function (app) {
+        app.init();
+    });
+})();

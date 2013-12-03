@@ -30,7 +30,8 @@ module.exports = function (grunt) {
                     _: true,
                     alert: false,
                     console: false,
-                    require: true
+                    require: true,
+                    define: true
                 }
             },
             all: ['app/**/*.js']
