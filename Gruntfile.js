@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Project configuration.
 	grunt.initConfig({
@@ -73,6 +74,17 @@ module.exports = function (grunt) {
                     'bower_components'
                 ]
             }
+        },
+
+        watch: {
+            less: {
+                files: ['assets/less/**/*.less'],
+                tasks: ['less'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            }
         }
 
     });
@@ -85,6 +97,6 @@ module.exports = function (grunt) {
     grunt.registerTask('compile:prod', ['jshint', 'less:prod']);
 
     // Run Servers
-    grunt.registerTask('run:dev', ['compile:dev', 'connect:dev']);
+    grunt.registerTask('run:dev', ['compile:dev', 'connect:dev', 'watch']);
 
 };

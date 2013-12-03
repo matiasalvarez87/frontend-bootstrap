@@ -45,6 +45,9 @@ Bootstrap application to start a new Front-End project using Bower and GruntJS
 - Install Connect Server
 	npm install grunt-connect --save-dev
 
+- Install Watch Plugin to compile CSS every time a LESS file changes
+	npm install grunt-contrib-watch --save-dev
+
 
 ### Installing Bower dependencies
 

@@ -16,7 +16,8 @@
   "gitHead": "a449cf97c91878f7541f7934c382f468494669ca",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-connect": "~0.2.0"
+    "grunt-connect": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "dependencies": {
     "grunt-contrib-jshint": "~0.7.2",
